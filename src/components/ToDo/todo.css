@@ -1,0 +1,84 @@
+.todo-prev {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.todo {
+    width: 90%;
+    text-align: start;
+    color: #fff;
+    padding: 5px;
+}
+
+.todo:nth-child(4n + 1) {
+    background: linear-gradient(
+        90deg,
+        rgba(93,12,255,1) 0%,
+        rgba(155,0,255,1) 100%
+    );
+}
+
+.todo:nth-child(4n + 2) {
+    background: linear-gradient(
+        90deg,
+        rgb(31, 228, 149) 0%,
+        rgb(149, 255, 0) 100%
+    );
+}
+
+.todo:nth-child(4n + 3) {
+    background: linear-gradient(
+        90deg,
+        rgb(255, 12, 214) 0%,
+        rgba(155,0,255,1) 100%
+    );
+}
+
+.todo:nth-child(4n + 4) {
+    background: linear-gradient(
+        90deg,
+        rgb(255, 69, 12) 0%,
+        rgb(191, 13, 13) 100%
+    );
+}
+
+
+.control {
+    float: right;
+}
+
+.complete {
+    text-decoration: line-through;
+    text-decoration-color: black;
+    text-decoration-style: solid;
+}
+
+.button {
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+span {
+    margin: 10px;
+}
+
+.collapse {
+    position: relative;
+    margin-left: 20px;
+}
+
+.collapse input {
+    width: 80%;
+}
+
+.collapse .btnUpdate {
+    position: relative;
+    float: right;
+    top: 10px;
+    margin-right: 30px;
+    cursor: pointer;
+}
