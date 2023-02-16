@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { addTodo } from '../../redux/slices/todoSlice';
-import './Form.css';
+import './todoForm.css';
 
 const TodoForm = () => {
 
@@ -12,6 +12,7 @@ const TodoForm = () => {
       id: 1,
       todo: '',
       done: false,
+      open: false,
   }
 
   const [toDo, setToDo] = useState(initialState);

@@ -1,7 +1,11 @@
 .todo-list {
     display: flex;
     flex-direction: column;
-    background-color:black;
+    background: linear-gradient(    
+        90deg,
+        rgb(12, 31, 59) 0%,
+        rgb(35, 9, 52) 100%
+    );
     width: 60%;
     height: 90%;
     overflow: auto;
@@ -13,6 +17,15 @@ h2 {
     color: #fff;
 }
 
+
+.todo-prev {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
 
 @media only screen and (max-width: 768px) {
     .todo-list {

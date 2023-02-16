@@ -1,0 +1,30 @@
+
+.show {
+    display: block;
+    position: relative;
+    margin-left: 20px;
+}
+
+.show input {
+    width: 80%;
+}
+
+.show .btnUpdate {
+    position: relative;
+    float: right;
+    top: 4px;
+    cursor: pointer;
+    border: none;
+    border-radius: 30%;
+    background: linear-gradient(
+        90deg,
+        rgb(78, 19, 196) 0%,
+        rgb(43, 11, 68) 100%
+    );
+    color: #fff;
+}
+
+
+.show .btnUpdate:hover {
+    transform: scale(0.8);
+}

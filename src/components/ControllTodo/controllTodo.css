@@ -1,0 +1,13 @@
+.control {
+    float: right;
+}
+
+.button {
+    cursor: pointer;
+    margin: 0 6px;
+}
+
+.button:hover {
+    color: #080707;
+    transform:scale(1.3)
+}

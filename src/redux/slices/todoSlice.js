@@ -29,6 +29,14 @@ export const todosSlice = createSlice({
                 ))
             })
         },
+        toggle: (state, action) => {
+            return({
+                ...state,
+                todos: state.todos.map((todo) => (
+                    todo.id === action.payload ? {...todo, open: !todo.open} : todo
+                ))
+            })
+        },
         editTodo: (state,action) => {
             return ({
                 ...state, 
@@ -36,11 +44,11 @@ export const todosSlice = createSlice({
                     todo.id === action.payload.id ? {...todo, todo:action.payload.value} : todo
                 ))
             })
-        }
+        },
     }
 })
 
-export const {addTodo, deleteTodo, checkTodo, editTodo} = todosSlice.actions;
+export const {addTodo, deleteTodo, checkTodo, editTodo, toggle} = todosSlice.actions;
 
 export const todosState = (state) => state.todos;
 

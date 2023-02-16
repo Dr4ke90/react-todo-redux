@@ -25,8 +25,13 @@
     outline: none;
     background: linear-gradient(
         90deg,
-        rgba(93,12,255,1) 0%,
-        rgba(155,0,255,1) 100%
+        rgb(78, 19, 196) 0%,
+        rgb(43, 11, 68) 100%
     );
     color: #fff;
+}
+
+
+.todo-form .add-button:hover {
+    transform: scale(1.1);
 }

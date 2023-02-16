@@ -1,11 +1,3 @@
-.todo-prev {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 15px;
-}
 
 .todo {
     width: 90%;
@@ -47,38 +39,14 @@
 }
 
 
-.control {
-    float: right;
-}
-
 .complete {
     text-decoration: line-through;
     text-decoration-color: black;
     text-decoration-style: solid;
 }
 
-.button {
-    cursor: pointer;
-    margin: 0 10px;
-}
 
 span {
     margin: 10px;
 }
 
-.collapse {
-    position: relative;
-    margin-left: 20px;
-}
-
-.collapse input {
-    width: 80%;
-}
-
-.collapse .btnUpdate {
-    position: relative;
-    float: right;
-    top: 10px;
-    margin-right: 30px;
-    cursor: pointer;
-}
