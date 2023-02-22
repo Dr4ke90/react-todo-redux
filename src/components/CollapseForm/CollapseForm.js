@@ -10,8 +10,9 @@ const CollapseForm = ({todo, className}) => {
 
 
     const handleUpdate = (id) => {
-        if(updateRef === '') return
+        if(updateRef.current.value === '') return
         dispatch(editTodo({id:id, value:updateRef.current.value}))
+        updateRef.current.value = ''
     }
 
   return (
