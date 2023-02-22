@@ -11,8 +11,6 @@ const TodoForm = () => {
   const initialState = {
       id: 1,
       todo: '',
-      done: false,
-      open: false,
   }
 
   const [toDo, setToDo] = useState(initialState);
@@ -31,7 +29,7 @@ const TodoForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    if(toDo.todo == '') return
+    if(toDo.todo === '') return
 
     dispatch(addTodo(toDo))
     setToDo({

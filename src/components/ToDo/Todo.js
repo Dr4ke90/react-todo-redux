@@ -1,25 +1,24 @@
-import { useDispatch } from "react-redux";
-import { checkTodo } from "../../redux/slices/todoSlice";
 import "./todo.css";
 import CollapseForm from "../CollapseForm/CollapseForm";
 import ControllTodo from "../ControllTodo/ControllTodo";
+import {useState } from "react";
 
 const Todo = ({todo}) => {
-  const dispatch = useDispatch();
 
+  const [check, setCheck] = useState(false)
+  const [open, setOpen] = useState(false)
 
-  const handleCheckBox = (id) => {
-    dispatch(checkTodo(id));
-  };
+  const handleClick = () => {
+      setOpen(!open)
+  }
 
-  
 
   return (
     <div className="todo">
-      <input type="checkbox" onChange={() => handleCheckBox(todo.id)} checked={todo.done} />
-      <span className={todo.done ? "complete" : ""}>{todo.todo}</span>
-      <ControllTodo todo={todo} />
-      <CollapseForm todo={todo} />
+      <input type="checkbox"  onChange={() => setCheck(!check)} checked={check} />
+      <span className={check ? "complete" : ""}>{todo.todo}</span>
+      <ControllTodo todo={todo} handleClick={handleClick} />
+      <CollapseForm todo={todo} className={open ? 'show' : 'collapse'} />
     </div>
   );
 };

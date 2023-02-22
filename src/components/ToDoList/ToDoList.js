@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import { todosState } from '../../redux/slices/todoSlice';
 
 const ToDoList = () => {
-
+  
     const {todos} = useSelector(todosState)
 
   return (
@@ -15,7 +15,7 @@ const ToDoList = () => {
         <TodoForm />
         <div className='todo-prev'>
             {todos.map((todo) => (
-                <Todo todo={todo} key={`${todo.id}`}/>
+                <Todo todo={todo} key={`${todo.id}`} />
             ))}
         </div>  
     </div>

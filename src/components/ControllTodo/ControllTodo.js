@@ -1,20 +1,19 @@
 import React from "react";
 import { FiXOctagon, FiEdit } from "react-icons/fi";
 import { useDispatch } from "react-redux";
-import { deleteTodo, toggle } from "../../redux/slices/todoSlice";
+import { deleteTodo } from "../../redux/slices/todoSlice";
 import './controllTodo.css'
 
 
-const ControllTodo = ({todo}) => {
+const ControllTodo = ({todo, handleClick}) => {
  
     const dispatch = useDispatch()
-    
 
   return (
     <div className="control">
       <FiEdit
         className="button"
-        onClick={() => dispatch(toggle(todo.id))}
+        onClick={handleClick}
          />
       <FiXOctagon 
         className="button" 
