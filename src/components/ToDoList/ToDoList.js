@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import { todosState } from '../../redux/slices/todoSlice';
 
 const ToDoList = () => {
-  
+
     const {todos} = useSelector(todosState)
 
   return (

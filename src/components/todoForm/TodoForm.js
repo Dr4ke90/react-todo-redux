@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { addTodo } from '../../redux/slices/todoSlice';
 import './todoForm.css';
+import { v4 as uuidv4 } from 'uuid';
 
 const TodoForm = () => {
 
@@ -9,8 +10,7 @@ const TodoForm = () => {
   const dispatch = useDispatch();
 
   const initialState = {
-      id: 1,
-      todo: '',
+    todo: ''
   }
 
   const [toDo, setToDo] = useState(initialState);
@@ -22,7 +22,8 @@ const TodoForm = () => {
 
       setToDo({
         ...toDo,
-        [name]:value
+        [name]:value,
+        id: uuidv4()
       })
   }
 
@@ -33,8 +34,7 @@ const TodoForm = () => {
 
     dispatch(addTodo(toDo))
     setToDo({
-      ...initialState, 
-      id: toDo.id + 1,
+      ...initialState
      })
   }
 
