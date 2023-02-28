@@ -9,7 +9,6 @@ export const todosSlice = createSlice({
     reducers: {
         addTodo: (state,action) => {
             return ({
-                ...state,
                 todos: [
                     ...state.todos,
                     action.payload
